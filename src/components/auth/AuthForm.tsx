@@ -19,8 +19,8 @@ const AuthForm: React.FC<AuthFormProps> = ({ type }) => {
   
   // Login form state
   const [loginData, setLoginData] = useState({
-    email: '',
-    password: '',
+    Email: '',
+    Password: '',
   });
 
   // Register form state
@@ -41,8 +41,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ type }) => {
     setIsLoading(true);
     
     try {
-      const response = await authService.login(loginData.email, loginData.password);
-      
+      const response = await authService.login(loginData.Email, loginData.Password);
       if (response.found) {
         // Store user data in localStorage or state management
         localStorage.setItem('isLoggedIn', 'true');
@@ -130,8 +129,8 @@ const AuthForm: React.FC<AuthFormProps> = ({ type }) => {
               id="email" 
               type="email" 
               placeholder="your.email@example.com" 
-              value={loginData.email}
-              onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
+              value={loginData.Email}
+              onChange={(e) => setLoginData({ ...loginData, Email: e.target.value })}
               required
             />
           </div>
@@ -147,8 +146,8 @@ const AuthForm: React.FC<AuthFormProps> = ({ type }) => {
               id="password" 
               type="password" 
               placeholder="••••••••" 
-              value={loginData.password}
-              onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
+              value={loginData.Password}
+              onChange={(e) => setLoginData({ ...loginData, Password: e.target.value })}
               required
             />
           </div>
