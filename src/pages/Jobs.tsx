@@ -122,7 +122,7 @@ const Jobs = () => {
                       </div>
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">All Durations</SelectItem>
+                      <SelectItem value="all">All Durations</SelectItem>
                       <SelectItem value="summer">Summer</SelectItem>
                       <SelectItem value="semester">Semester</SelectItem>
                       <SelectItem value="year">Full Year</SelectItem>
